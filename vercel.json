@@ -1,6 +1,15 @@
 {
-  "version": 2,
-  "name": "shorturl",
-  "builds": [{ "src": "app.js", "use": "@now/node" }],
-  "routes": [{ "handle": "vercel", "src": "/(.*)", "dest": "/app.js" }]
+    "version": 2,
+    "builds": [
+      {
+        "src": "./index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ]
 }
