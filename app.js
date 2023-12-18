@@ -4,11 +4,13 @@ const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const app = express();
+const path = require("path");
 
 dotenv.config();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
