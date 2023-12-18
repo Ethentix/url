@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/auth", "dest": "/routes/auth.js" },
+    { "src": "/index", "dest": "/routes/index.js" },
+    { "src": "/url", "dest": "/routes/url.js" },
+    { "src": "/(.*)", "dest": "/app.js" }
+  ]
+}
