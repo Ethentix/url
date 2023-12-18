@@ -1,10 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "app.js",
-      "use": "@vercel/node"
-    }
+    { "src": "views/**", "use": "@now/node-server" },
+    { "src": "public/**", "use": "@now/static" },
+    { "src": "app.js", "use": "@now/node" }
   ],
   "routes": [
     { "src": "/auth", "dest": "/routes/auth.js" },
