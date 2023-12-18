@@ -56,7 +56,7 @@ router.post('/register', async (req, res) => {
 
     await newUser.save();
 
-    res.redirect('/auth/login');
+    res.redirect('/login');
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal Server Error');
@@ -65,7 +65,7 @@ router.post('/register', async (req, res) => {
 
 router.get('/logout', (req, res) => {
   res.clearCookie('token');
-  res.redirect('/auth/login');
+  res.redirect('/login');
 });
 
 module.exports = router;

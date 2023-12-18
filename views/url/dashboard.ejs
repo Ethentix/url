@@ -2,186 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="16x16" href="../css/fav.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../css/fav.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <style>
-      body {
-        background-color: #121212;
-        color: whitesmoke;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-          sans-serif;
-        margin: 0;
-      }
-
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-        margin: 20px auto;
-      }
-
-      h1 {
-        color: #ffffff;
-        margin: 0;
-      }
-
-      .button-4 {
-        background-color: #1f1f1f;
-        border: 1px solid rgba(27, 31, 35, 0.15);
-        border-radius: 6px;
-        box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
-          rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-        color: #ffffff;
-        cursor: pointer;
-        display: inline-block;
-        font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
-          sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 20px;
-        list-style: none;
-        padding: 6px 16px;
-        position: relative;
-        transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        vertical-align: middle;
-        white-space: nowrap;
-        word-wrap: break-word;
-      }
-
-      .button-4:hover {
-        background-color: #404040;
-        text-decoration: none;
-        transition-duration: 0.1s;
-      }
-
-      .button-4:disabled {
-        background-color: #fafbfc;
-        border-color: rgba(27, 31, 35, 0.15);
-        color: #959da5;
-        cursor: default;
-      }
-
-      .button-4:active {
-        background-color: #121212;
-        box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
-        transition: none 0s;
-      }
-
-      .button-4:focus {
-        outline: 1px transparent;
-      }
-      .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 20%;
-      }
-
-      .auth-links a {
-        color: #333333;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      .auth-links a:hover {
-        color: #555555;
-      }
-
-      .welcome-msg p {
-        color: #fafbfc;
-      }
-
-      table {
-        width: 80%;
-        margin: 20px auto;
-        border-collapse: collapse;
-      }
-
-      th,
-      td {
-        padding: 15px;
-        text-align: left;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.277);
-      }
-
-      th:first-child,
-      td:first-child {
-        border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
-      }
-
-      th:last-child,
-      td:last-child {
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
-      }
-
-      a[target="_blank"] {
-        color: #ffffff;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      a[target="_blank"]:hover {
-        color: whitesmoke;
-      }
-
-      .copy-button {
-        display: inline-block;
-        margin-left: 10px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-      }
-
-      .copy-button:hover {
-        transform: scale(1.2);
-      }
-
-      @media (max-width: 600px) {
-        th:first-child,
-        td:first-child {
-          display: none;
-        }
-
-        th,
-        td {
-          display: block;
-          width: 100%;
-          box-sizing: border-box;
-        }
-
-        .header,
-        .nav {
-          flex-direction: column;
-          width: 100%;
-        }
-
-        .auth-links {
-          margin-top: 0;
-          margin-bottom: 15px;
-        }
-      }
-      .shorten-link {
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        padding: 10px 20px;
-        background-color: #333333;
-        color: #ffffff;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-      }
-
-      .shorten-link:hover {
-        background-color: #444444;
-      }
-    </style>
   </head>
 
   <body>
@@ -195,12 +19,12 @@
           </div>
           <% } else { %>
           <div class="auth-links">
-            <a href="/auth/login">Login</a>
-            <a href="/auth/register">Register</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
           </div>
           <% } %>
         </div>
-        <form action="/auth/logout" method="get">
+        <form action="/logout" method="get">
           <button class="button-4" type="submit">Logout</button>
         </form>
       </div>
@@ -211,8 +35,8 @@
     <table>
       <thead>
         <tr>
-          <th style="color: #959da5">Original URL</th>
-          <th style="color: #959da5">Shortened URL</th>
+          <th>Original URL</th>
+          <th>Shortened URL</th>
           <th></th>
         </tr>
       </thead>

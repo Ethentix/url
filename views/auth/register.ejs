@@ -1,144 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="16x16" href="/css/fav.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/css/fav.png" />
 
     <title>Register</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #121212;
-            color: #ffffff;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        form {
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 400px;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            background-color: #1f1f1f;
-            color: #ffffff;
-            border: 1px solid #404040;
-            border-radius: 5px;
-            font-size: 0.8em;
-        }
-
-        .button-4 {
-            background-color: #1f1f1f;
-            border: 1px solid rgba(27, 31, 35, 0.15);
-            border-radius: 6px;
-            box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
-                rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-            box-sizing: border-box;
-            color: #ffffff;
-            cursor: pointer;
-            display: inline-block;
-            font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
-                sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
-            list-style: none;
-            padding: 6px 16px;
-            position: relative;
-            transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            vertical-align: middle;
-            white-space: nowrap;
-            word-wrap: break-word;
-        }
-
-        .button-4:hover {
-            background-color: #404040;
-            text-decoration: none;
-            transition-duration: 0.1s;
-        }
-
-        .button-4:disabled {
-            background-color: #fafbfc;
-            border-color: rgba(27, 31, 35, 0.15);
-            color: #959da5;
-            cursor: default;
-        }
-
-        .button-4:active {
-            background-color: #121212;
-            box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
-            transition: none 0s;
-        }
-
-        .button-4:focus {
-            outline: 1px transparent;
-        }
-
-        .button-4:before {
-            display: none;
-        }
-
-        .button-4:-webkit-details-marker {
-            display: none;
-        }
-
-        .login-link {
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-
-        .login-link a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        .login-link a:hover {
-            text-decoration: underline;
-        }
-
-        /* Media Queries */
-        @media (max-width: 600px) {
-            form {
-                width: 90%;
-            }
-        }
-    </style>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Register</h2>
     <% if (error) { %>
-        <p><%= error %></p>
+    <p><%= error %></p>
     <% } %>
-    <form action="/auth/register" method="post">
-        <input type="text" id="username" name="username" placeholder="Username" required>
-        <input type="password" id="password" name="password" placeholder="Password" required>
-        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
-        <button class="button-4" type="submit">Register</button>
+    <form action="/register" method="post">
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Username"
+        required
+      />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+        required
+      />
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        placeholder="Confirm Password"
+        required
+      />
+      <button class="button-4" type="submit">Register</button>
     </form>
     <div class="login-link">
-        Already have an account? <a href="/auth/login">Login</a>
+      Already have an account? <a href="/login">Login</a>
     </div>
-</body>
+  </body>
 </html>
