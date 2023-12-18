@@ -1,12 +1,12 @@
 {
   "name": "shorturl",
   "version": "1.0.0",
-  "description": "",
+  "description": "Your application description",
   "main": "app.js",
   "scripts": {
-    "start" : "node app.js"
+    "start": "node app.js"
   },
-  "author": "",
+  "author": "Seelam Shantosh",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -18,5 +18,11 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3",
     "shortid": "^2.2.16"
+  },
+  "engines": {
+    "node": "14.x"  
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }
